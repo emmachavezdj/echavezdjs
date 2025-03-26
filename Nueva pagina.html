@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmanuel Chavez DJs - Packs de Música</title>
+  <meta name="description" content="Descubre los packs de música de Emmanuel Chavez DJs, disponibles para descarga o compra. Packs mensuales, karaoke y más.">
+  <meta name="keywords" content="Emmanuel Chavez DJs, packs de música, karaoke, compra, descarga, DJ, música, entretenimiento">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos básicos y reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('EMMA.jpg') no-repeat center center/cover;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    h1, h2 {
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 5rem;
+      margin: 0;
+      text-transform: uppercase;
+      background: linear-gradient(45deg, #f39c12, #e74c3c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-top: 10px;
+      color: #f39c12;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    /* Estilo para packs, contacto y sobre mí con animación */
+    .pack, .contact, .about {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 15px;
+      max-width: 400px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease-in-out;
+    }
+    .pack.visible, .contact.visible, .about.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: none; /* Ocultar las carpetas por defecto */
+    }
+    li {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #c0392b;
+    }
+    .toggle-btn {
+      margin-top: 20px;
+    }
+    .price {
+      font-size: 1.5rem;
+      margin: 15px 0;
+      color: #f39c12;
+    }
+    /* Estilos del formulario de contacto */
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    .contact button {
+      width: 50%;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: #333;
+      padding: 20px 0;
+      color: white;
+      font-size: 1rem;
+    }
+    footer a {
+      color: #f39c12;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Emmanuel Chavez DJs</h1>
+    <h2>Packs de Música</h2>
+  </header>
+
+  <section id="packs">
+    <h2>Mis Packs de Música</h2>
+
+    <!-- Pack Enero -->
+    <div class="pack">
+      <h3>Enero</h3>
+      <p>Batea de Enero completa. Contiene las siguientes carpetas:</p>
+      <ul id="enero-list">
+        <li>100% RECOMENDABLES</li>
+        <li>AFRO</li>
+        <li>APPEL MUSIC</li>
+        <li>BOLICHEROS</li>
+        <li>BRASILERO FUNK</li>
+        <li>CACHENGUE</li>
+        <li>CACHENGUE VIP</li>
+        <li>CHAMAME NUEVO</li>
+        <li>CUARTETO</li>
+        <li>CUARTETO EXTENDED</li>
+        <li>CUARTETO RETRO MIX</li>
+        <li>CUMBIA GOLD SANTAFESINA</li>
+        <li>CUMBIA SANTAFESINA EXTENDED</li>
+        <li>CUMBIA TODO LO NUEVO</li>
+        <li>CUMBIAS 2000</li>
+        <li>DANCE</li>
+        <li>DANCE QUE VUELVEN EN VERANO</li>
+        <li>DISCO NEW</li>
+        <li>DJ MATIAS CROW</li>
+        <li>GUARACHA</li>
+        <li>HOUSE REMIX</li>
+        <li>INTER DIFUSION A (LO NUEVO)</li>
+        <li>INTER DIFUSION B (LO NUEVO)</li>
+        <li>LATIN MIX</li>
+        <li>LATINOS REMIX A</li>
+        <li>LATINOS REMIX B</li>
+        <li>LIBRERIA FX</li>
+        <li>LIBRERIA SAMPLES LOOPS</li>
+        <li>MASHUP</li>
+        <li>MEGAS SET Y SESSIONES</li>
+        <li>NOVEDADES ORIGINALES</li>
+        <li>NUMEROS 1 DE TODOS LOS TIEMPOS</li>
+        <li>OPEN SHOW</li>
+        <li>PERREO & TURREO</li>
+        <li>PLACAS FULL</li>
+        <li>RADIO LATINO DIFUSION A (LO NUEVO)</li>
+        <li>RADIO LATINO DIFUSION B (LO NUEVO)</li>
+        <li>REGGAETON</li>
+        <li>REGGAETON DE AHORA</li>
+        <li>REGGAETON VIEJO</li>
+        <li>REGGAETON Y TRAP LO NUEVO</li>
+        <li>REMIXES A</li>
+        <li>REMIXES B</li>
+        <li>REWORK NEW</li>
+        <li>RKT</li>
+        <li>ROCK NACIONAL EXTENDED</li>
+        <li>TECH HOUSE</li>
+        <li>TECHENGUE</li>
+      </ul>
+      <p class="price">Gratis</p>
+      <button class="toggle-btn" onclick="toggleVisibility('enero-list')">Mostrar Carpetas</button>
+      <button onclick="window.location.href='https://wa.me/2615915946?text=Quiero%20comprar%20el%20pack%20de%20Enero%20y%20es%20gratis.'">Comprar Ahora</button>
+    </div>
+
+    <!-- Pack Febrero -->
+    <div class="pack">
+      <h3>Febrero</h3>
+      <p>Batea de Febrero completa. Contiene las siguientes carpetas:</p>
+      <ul id="febrero-list">
+        <li>100% RECOMENDADO</li>
+        <li>AFRO</li>
+        <li>APPLE MUSIC</li>
+        <li>BRESH POP</li>
+        <li>CACHENGUE</li>
+        <li>CACHENGUE EXCLUSIVO REGGAETON VIP</li>
+        <li>CARTETO RETRO</li>
+        <li>CHARTS IGUANA EXTENDED</li>
+        <li>CUARTETO</li>
+        <li>CUARTETO EXTENDED</li>
+        <li>CUMBIA</li>
+        <li>CUMBIA REMIX</li>
+      </ul>
+      <p class="price">Gratis</p>
+      <button class="toggle-btn" onclick="toggleVisibility('febrero-list')">Mostrar Carpetas</button>
+      <button onclick="window.location.href='https://wa.me/2615915946?text=Quiero%20comprar%20el%20pack%20de%20Febrero%20y%20es%20gratis.'">Comprar Ahora</button>
+    </div>
+
+    <!-- Pack Karaoke -->
+    <div class="pack">
+      <h3>Karaoke</h3>
+      <p>Batea de Karaoke completa. Contiene las siguientes carpetas:</p>
+      <ul id="karaoke-list">
+        <li>Karaoke CUARTETO</li>
+        <li>Karaoke CUMBIA</li>
+        <li>Karaoke Cumbia Retro 01</li>
+        <li>Karaoke Cumbia Retro 02</li>
+        <li>Karaoke Cumbia Santafesina</li>
+        <li>Karaoke Cumbia Villera</li>
+        <li>Karaoke Folclore</li>
+        <li>Karaoke Latinos Retros</li>
+        <li>Karaoke REGGAETON - TRAP</li>
+        <li>Karaoke Rock Nacional 01</li>
+        <li>Karaoke Rock Nacional 02</li>
+        <li>Karaoke Rock Nacional 03</li>
+        <li>Karaoke ROMANTICO</li>
+        <li>Karaokes Cuarteto Retro 01</li>
+        <li>Karaokes Cuarteto Retro 02</li>
+        <li>Karaokes Cuarteto Retro 03</li>
+        <li>Karaokes Cuarteto Retro 04</li>
+        <li>Karaokes Megas y Enganchados</li>
+      </ul>
+      <p class="price">$5000</p>
+      <button class="toggle-btn" onclick="toggleVisibility('karaoke-list')">Mostrar Carpetas</button>
+      <button onclick="window.location.href='https://wa.me/2615915946?text=Quiero%20comprar%20el%20pack%20de%20Karaoke%20por%20$5000.'">Comprar Ahora</button>
+    </div>
+
+    <!-- Pack Marzo A -->
+    <div class="pack">
+      <h3>Marzo A</h3>
+      <p>Batea de Marzo A completa. Contiene las siguientes carpetas:</p>
+      <ul id="marzo-a-list">
+        <li>100% RECOMENDADO</li>
+        <li>AFRO</li>
+        <li>APPLE MUSIC</li>
+        <li>BRESH POP</li>
+        <li>CACHENGUE</li>
+        <li>CACHENGUE EXCLUSIVO</li>
+        <li>CUARTETO</li>
+        <li>CUMBIA REMIX</li>
+        <li>DJ SETS</li>
+        <li>DANCE REMIXES</li>
+        <li>LATINOS REMIX</li>
+        <li>MEGAS Y SESSIONS</li>
+        <li>REGGAETON</li>
+        <li>REMIXES A</li>
+      </ul>
+      <p class="price">$2500</p>
+      <button class="toggle-btn" onclick="toggleVisibility('marzo-a-list')">Mostrar Carpetas</button>
+      <button onclick="window.location.href='https://wa.me/2615915946?text=Quiero%20comprar%20el%20pack%20de%20Marzo%20A%20por%20$2500.'">Comprar Ahora</button>
+    </div>
+
+    <!-- Pack Marzo B -->
+    <div class="pack">
+      <h3>Marzo B</h3>
+      <p>Batea de Marzo B completa. Contiene las siguientes carpetas:</p>
+      <ul id="marzo-b-list">
+        <li>100% RECOMENDADO</li>
+        <li>AFRO</li>
+        <li>BOLICHEROS</li>
+        <li>CUARTETO EXTENDED</li>
+        <li>CUMBIA SANTAFESINA</li>
+        <li>CUMBIA REMIX</li>
+        <li>LATIN MIX</li>
+        <li>MEGAS Y SESSIONS</li>
+        <li>REGGAETON DE AHORA</li>
+        <li>REGGAETON REMIX</li>
+        <li>ROCK REMIX</li>
+        <li>TECH HOUSE</li>
+      </ul>
+      <p class="price">$2500</p>
+      <button class="toggle-btn" onclick="toggleVisibility('marzo-b-list')">Mostrar Carpetas</button>
+      <button onclick="window.location.href='https://wa.me/2615915946?text=Quiero%20comprar%20el%20pack%20de%20Marzo%20B%20por%20$2500.'">Comprar Ahora</button>
+    </div>
+  </section>
+
+  <!-- Sección Sobre Mí -->
+  <section id="about">
+    <h2>Sobre Mí</h2>
+    <div class="about">
+      <p>Hola, soy Emmanuel Chavez, DJ con más de 10 años de experiencia en la industria musical. Mi pasión es compartir la mejor música y crear experiencias inolvidables para el público. ¡Gracias por visitar mi sitio!</p>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contact">
+    <h2>Contacto</h2>
+    <div class="contact">
+      <form action="mailto:chavezemma15@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Emmanuel Chavez DJs - Todos los derechos reservados.</p>
+    <div>
+      <a href="https://www.instagram.com/EMMACHAVEZDJ" target="_blank">@EMMACHAVEZDJ</a>
+      
+    </div>
+  </footer>
+
+  <script>
+    function toggleVisibility(listId) {
+      var list = document.getElementById(listId);
+      if (list.style.display === "none" || list.style.display === "") {
+        list.style.display = "block";
+      } else {
+        list.style.display = "none";
+      }
+    }
+    // Animación al hacer scroll: se agrega la clase "visible" cuando el elemento aparece en pantalla.
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.pack, .contact, .about').forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
